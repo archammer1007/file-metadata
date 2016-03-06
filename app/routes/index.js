@@ -10,7 +10,7 @@ module.exports = function(app){
 	app.post('/file',upload.single('fileSizeCheck'), function(req,res){
 		var rspstr = 'file size: ' + req.file.size + ' bytes'
     	console.log(rspstr);
-    	res.send({filesize: rspstr});
+    	res.send({message: rspstr});
 	})
 	
 }
